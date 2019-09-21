@@ -33,7 +33,7 @@ for i in range(s//5*k_y,canv_h,s//5*k_y):
 canv.create_line(k_x*s,canv_h,k_x*s,canv_h,width=2, fill='red')
 
 for i in range(0,100,1):
-    #y = s*tan(radians(a)) - (g*(s**2)/2)*v_0**2*cos(radians(a))**2)
+
     y = (v_0*sin(radians(a))*(i/10)-g*((i/10)**2)/2); 
     x = v_0*cos(radians(a))*(i/10); 
     canv.create_oval( (x*k_x//5),(canv_h-y*k_y), (x*k_x + 1)//5, (canv_h-y*k_y + 1), fill = 'black')
@@ -76,7 +76,7 @@ lb_res.place(x=185,y=35);
 bt_calc = Button(root,
                  text = "Вычислить",
                  width=20)
-bt_calc.bind("<Button-1>", f_calc())
+bt_calc.bind("<Button-1>", f_calc)
 
 bt_calc.place(x=135,
               y=65)
