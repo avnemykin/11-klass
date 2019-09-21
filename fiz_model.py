@@ -37,7 +37,7 @@ for i in range(0,100,1):
     y = (v_0*sin(radians(a))*(i/10)-g*((i/10)**2)/2); 
     x = v_0*cos(radians(a))*(i/10); 
     canv.create_oval( (x*k_x//5),(canv_h-y*k_y), (x*k_x + 1)//5, (canv_h-y*k_y + 1), fill = 'black')
-def f_calc():
+def f_calc(event):
     a = int(ent_grad.get())
     v_0 = int(ent_speed.get())
     g = 9.8
