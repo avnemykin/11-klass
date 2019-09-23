@@ -37,7 +37,7 @@ lb_grad_r = Label(root, text="град");  lb_grad_r.place(x=195,y=105);
 
 
 bt_calc = Button(root,
-                 text = "Диапзон углов",
+                 text = "Диапазон углов",
                  width=30, height=2)
 bt_calc.bind("<Button-1>", f_calc)
 bt_calc.place(x=135,y=35)
