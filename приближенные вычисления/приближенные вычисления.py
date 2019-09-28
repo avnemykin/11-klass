@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+#Как подключить mathplotlib
+#WIN + R
+#cmd
+#python -m pip install -U pip
+#python -m pip install -U matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
