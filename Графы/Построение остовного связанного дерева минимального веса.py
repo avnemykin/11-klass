@@ -9,12 +9,17 @@ chis.geometry("550x580")
 canv = Canvas(chis, width = 350, height = 300, bg = "white")             #Создание canvas
 canv.place(x=15,y=264)
 
+#Создание виджетов ввода количества вершин
 
-lb_a=Label(chis, bg="white",  width=25,font="Arial,");lb_a["text"]="Количество вершин";lb_a.place(x=15, y=46)
+lb_a=Label(chis, bg="white",  width=25,font="Arial,");lb_a["text"]="Количество вершин";lb_a.place(x=15, y=46) 
 ent_nr=Entry(chis, width=5, bg="white",font="Arial"); ent_nr.place(x=300, y=46)
 bt_ct=Button(chis, text="Создать таблицу",foreground="green",font="Arial"); bt_ct.place(x=370, y=46);
 
+#Создание фрейма для отображения таблицы из Entry
+
 frm = Frame(chis, bg="white"); frm.place(x=15, y=86);
+
+#Функция создания таблицы
 
 def creat_table(event):
     if 2<int(ent_nr.get()) <7:
@@ -30,10 +35,10 @@ def creat_table(event):
         
         ent_nr.delete(0, END)
 
-def creat_osd(event):
+        
+ #Функция  отрисовки остовного дерева минимального веса
 
-
-    
+def creat_osd(event):   
 
     
     for i in range(1,int(ent_nr.get())+1):
